@@ -9,6 +9,9 @@ import { JwtInterceptor } from 'src/core/services/interceptor/jwt.interceptor';
 
 import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './home/home.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AdminModule } from './admin/admin.module';
+import { EmployeeModule } from './employee/employee.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +22,9 @@ import { HomeModule } from './home/home.module';
     FormsModule,
     AuthModule,
     HomeModule,
+    DashboardModule,
+    AdminModule,
+    EmployeeModule,
   ],
   providers: [
     {

@@ -35,9 +35,11 @@ export class AuthService {
   }
   private async redirectToAppropriatePage(userType: number) {
     if (userType === 0) {
-      await this.router.navigate(['/dashboard']);
+      await this.router.navigate(['/dashboard/admin/panel']);
     } else if (userType === 1) {
-      await this.router.navigate(['/panel']);
+      await this.router.navigate(['/dashboard/employee/panel']);
+    } else if (userType === 2) {
+      await this.router.navigate(['/dashboard/customer/panel']);
     }
   }
 
