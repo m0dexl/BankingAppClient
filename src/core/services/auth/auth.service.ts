@@ -127,4 +127,16 @@ export class AuthService {
     sessionStorage.clear();
     this.currentUserSubject.next(null);
   }
+
+  public async createNewUser(
+    request: RegisterRequest
+  ): Promise<ResponseStatus> {
+    const registerResponse = await this.apiService
+      .register(request)
+      .toPromise();
+
+    let status = registerResponse!.status;
+
+    return status;
+  }
 }

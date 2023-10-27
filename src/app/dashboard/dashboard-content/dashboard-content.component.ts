@@ -125,4 +125,9 @@ export class DashboardContentComponent implements OnInit {
       });
     this.isUserUpdating = false;
   }
+
+  async logOut() {
+    sessionStorage.clear();
+    await this.router.navigate(['../home']);
+  }
 }
